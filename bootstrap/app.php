@@ -17,11 +17,11 @@ return Application::configure(basePath: dirname(__DIR__))
     })
     ->withExceptions(function (Exceptions $exceptions) {
         // 修正为异常输出 待测试
-        $exceptions->render(function (Exception $e, Request $request) {
-            // 判定是否 json 输出
-            if ($request->expectsJson()) {
-                return app(ApiExceptionProcessor::class)->process($e, $request);
-            }
-            return false;
-        });
+//        $exceptions->render(function (Exception $e, Request $request) {
+//            // 判定是否 json 输出
+//            if ($request->expectsJson()) {
+//                return app(ApiExceptionProcessor::class)->process($e, $request);
+//            }
+//            return false;
+//        });
     })->create();
