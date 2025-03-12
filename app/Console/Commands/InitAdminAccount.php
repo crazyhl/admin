@@ -26,7 +26,7 @@ class InitAdminAccount extends Command
     /**
      * Execute the console command.
      */
-    public function handle()
+    public function handle(): void
     {
         // 创建管理员账号密码，账号密码需要用户输入
         $username = $this->ask(__('Input your super admin username'));
