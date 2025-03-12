@@ -4,9 +4,8 @@ namespace App\Http\Controllers\Api\Admin\User;
 
 use App\Exceptions\LoginFailException;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\LoginRequest;
+use App\Http\Requests\Admin\User\LoginRequest;
 use App\Http\Services\UserService;
-use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {

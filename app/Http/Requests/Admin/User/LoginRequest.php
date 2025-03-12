@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Admin;
+namespace App\Http\Requests\Admin\User;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class RegisterRequest extends FormRequest
+class LoginRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,9 +24,15 @@ class RegisterRequest extends FormRequest
         return [
             'email' => 'required|email',
             'password' => 'required',
-            'confirmPassword' => 'required|same:password',
             'device' => 'required',
             'captcha' => 'required|captcha_api:' . request('key'),
+        ];
+    }
+
+    public function attributes()
+    {
+        return [
+            'email' => __('customEmail'),
         ];
     }
 }

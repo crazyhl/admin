@@ -4,9 +4,8 @@ namespace App\Http\Controllers\Api\Admin\User;
 
 use App\Exceptions\RegisterFailException;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\RegisterRequest;
+use App\Http\Requests\Admin\User\RegisterRequest;
 use App\Http\Services\UserService;
-use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
