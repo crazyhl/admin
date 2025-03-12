@@ -226,5 +226,13 @@
     "Whoops!": "哎呀！",
     "Yes": "是的",
     "You are receiving this email because we received a password reset request for your account.": "您收到此电子邮件是因为我们收到了您帐户的密码重设请求。",
-    "customEmail": "自定义测试标签"
+    "customEmail": "自定义测试标签",
+    "Input your super admin username": "请输入超级管理员用户名(邮箱格式)",
+    "Input your super admin password": "请输入超级管理员密码",
+    "Created super admin user fail": "创建超级管理员账户失败，请检查",
+    "Created super admin user success": "创建超级管理员账户成功，请牢记用户名密码",
+    "Create super admin role": "创建超级管理员角色",
+    "Sync super admin role to admin user": "同步超级管理员角色到超级管理员呢账户",
+    "Super admin role already exists": "超级管理员角色已存在",
+    "Init super admin user success": "初始化超级管理员成功，开始使用系统吧"
 }
