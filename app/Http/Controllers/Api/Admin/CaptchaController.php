@@ -1,8 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Api\Admin\Utils;
-
-use Illuminate\Http\Request;
+namespace App\Http\Controllers\Api\Admin;
 
 class CaptchaController
 {

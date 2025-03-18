@@ -1,9 +1,9 @@
 <?php
 
 use App\Http\Controllers\Api\Admin\AuthController;
+use App\Http\Controllers\Api\Admin\CaptchaController;
 use App\Http\Controllers\Api\Admin\MenuController;
-use App\Http\Controllers\Api\Admin\User\UserController;
-use App\Http\Controllers\Api\Admin\Utils\CaptchaController;
+use App\Http\Controllers\Api\Admin\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
