@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\Admin\AuthController;
 use App\Http\Controllers\Api\Admin\CaptchaController;
+use App\Http\Controllers\Api\Admin\GenerateController;
 use App\Http\Controllers\Api\Admin\MenuController;
 use App\Http\Controllers\Api\Admin\UserController;
 use Illuminate\Http\Request;
@@ -30,5 +31,13 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/user/info', [UserController::class, 'info'])->name('user.info');// 用户信息
     // 退出登录
     Route::get('/logout', [AuthController::class, 'logout'])->name('user.logout');
+
+    // 代码生成器路由组，仅在本地环境可用
+    if (app()->environment('local')) {
+        Route::prefix('generateCode')->group(function () {
+            Route::get('allTable', [GenerateController::class, 'allTable'])->name('generate.all-table');
+            Route::get('tableSchema', [GenerateController::class, 'tableSchema'])->name('generate.tableInfo');
+        });
+    }
 });
 

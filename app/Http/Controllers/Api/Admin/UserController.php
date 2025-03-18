@@ -8,10 +8,10 @@ class UserController extends Controller
 {
     public function info()
     {
-        $isSuperAdmin = auth()->user()->hasRole('super-admin');
         $user = auth()->user();
         return apiResponse(0, [
-            'isSuperAdmin' => $isSuperAdmin,
+            'isSuperAdmin' => $user->hasRole('super-admin'),
+            'permissions' => $user->getAllPermissions(),
             'user' => $user,
         ],'');
     }
