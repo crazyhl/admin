@@ -22,7 +22,7 @@ class GenerateController extends Controller
     public function tableSchema(Request $request)
     {
         $tableName = $request->get('tableName');
-        if (Schema::hasTable($tableName)) {
+        if (!Schema::hasTable($tableName)) {
             return apiResponse(-1, [], '表不存在');
         }
 
