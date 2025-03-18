@@ -44,4 +44,10 @@ class UserService
             throw new RegisterFailException();
         }
     }
+
+    public function logout()
+    {
+//        logger()->info('ready to logout user', [auth()->user()]);
+        return auth()->user()->currentAccessToken()->delete();
+    }
 }
