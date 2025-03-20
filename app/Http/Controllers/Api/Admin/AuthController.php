@@ -5,10 +5,9 @@ namespace App\Http\Controllers\Api\Admin;
 use App\Exceptions\LoginFailException;
 use App\Exceptions\RegisterFailException;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\User\LoginRequest;
-use App\Http\Requests\Admin\User\RegisterRequest;
+use App\Http\Requests\Admin\Menu\Admin\User\LoginRequest;
+use App\Http\Requests\Admin\Menu\Admin\User\RegisterRequest;
 use App\Http\Services\UserService;
-use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {

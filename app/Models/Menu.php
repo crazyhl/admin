@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Menu extends Model
 {
+    protected $fillable = ['name', 'url', 'icon', 'parent_id', 'permission_name', 'status', 'sort', 'open_status', 'type'];
+
     //
     public function parent(): Menu|HasOne
     {
