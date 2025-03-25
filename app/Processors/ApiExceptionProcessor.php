@@ -15,6 +15,7 @@ class ApiExceptionProcessor
 {
     public function process(Exception $e, Request $request): JsonResponse
     {
+        logger()->error('exception', [$e]);
         $message = $e->getMessage();
         if ($e instanceof AuthenticationException) {
             $code = 401;

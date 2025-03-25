@@ -3,7 +3,6 @@
 use App\Http\Controllers\Api\Admin\AuthController;
 use App\Http\Controllers\Api\Admin\CaptchaController;
 use App\Http\Controllers\Api\Admin\GenerateController;
-use App\Http\Controllers\Api\Admin\MenuController;
 use App\Http\Controllers\Api\Admin\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -26,7 +25,6 @@ Route::get('/captcha', [CaptchaController::class, 'captcha'])->name('captcha.cre
 // 需要验证的逻辑
 Route::middleware(['auth:sanctum'])->group(function () {
     // 菜单相关
-    Route::resource('menus', MenuController::class)->except(['create', 'edit']); // 菜单 api 资源
     // 用户相关
     Route::get('/user/info', [UserController::class, 'info'])->name('user.info');// 用户信息
     // 退出登录
